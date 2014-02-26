@@ -26,7 +26,8 @@
 (live-load-config-file "mouse-conf.el")
 (live-load-config-file "ibuffer-git-conf.el")
 (live-load-config-file "key-chord-conf.el")
-(live-load-config-file "window-number-conf.el")
+;; It messes with my code for setting the hash key correctly.
+;(live-load-config-file "window-number-conf.el")
 (live-load-config-file "recentf-conf.el")
 (live-load-config-file "elisp-slime-nav-conf.el")
 (live-load-config-file "popwin-conf.el")

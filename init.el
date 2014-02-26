@@ -225,3 +225,5 @@
   (load custom-file))
 
 (message "\n\n Pack loading completed. Your Emacs is Live...\n\n")
+(when (file-exists-p (concat live-custom-dir "my-config.el"))
+  (load (concat live-custom-dir "my-config.el")))

@@ -5,7 +5,6 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-
 (defvar my-packages
   '(
     alpha
@@ -16,7 +15,6 @@
     command-frequency
     color-theme
     highlight-parentheses
-;;    revbufs
     ))
 
 (dolist (p my-packages)
@@ -33,7 +31,6 @@
 (load-library "pager")
 (load-library "session")
 (load-library "command-frequency")
-;;(load-library "revbufs")
 (load-library "highlight-parentheses")
 (transparency-set-value 100)
 (defun half ()
@@ -43,7 +40,10 @@
        (>= (frame-parameter nil 'alpha) 100)
        80 100)))
 
-
+(defun markdown-open ()
+  (interactive)
+  (shell-command (concat "open -a Marked.app " (buffer-file-name)))
+)
 
 (global-unset-key (kbd "\M-3"))
 (fset 'insertPound "#")
@@ -57,8 +57,6 @@
 
 
 (define-key global-map "§"            'half)
-(define-key global-map [(control \~)] 'open-project-file)
-(define-key global-map [(control \`)] 'open-todo-file)
 (global-set-key [f4]                  'shell)
 (global-set-key [?\s-!]               'calendar)
 (global-set-key "\C-l"                'goto-line)
@@ -66,26 +64,15 @@
 (global-set-key "\C-\\"               'comment-region)
 (global-set-key [(control /)]         'comment-region)
 (global-set-key "\M-o"                'recentf-open-files)
-(global-set-key [(control shift l)]   'slime-connect)
 (global-set-key [?\s-.]               'deft)
 
 (global-set-key [?\s--]               'evil-numbers/dec-at-pt)
 (global-set-key [?\s-+]               'evil-numbers/inc-at-pt)
 (global-set-key [?\s-O]               'recentf-open-files)
 (global-set-key [?\s-§]               'ibuffer)
-(global-set-key [?\s-S]               'save-all)
 
-(global-set-key [?\s-n]               'create-buffer)
-(global-set-key [?\s-N]               'create-buffer-and-save)
-(global-set-key [?\s-V]               'paste-buffer-and-save)
 (global-set-key [?\s-?]               'display-time-world)
 (global-set-key [f12]                 'linum-mode)
-(global-set-key [(control *)]         'blank-mode)
-
-;;eproject
-(global-set-key [?\s-P]               'eproject-open)
-(global-set-key [?\s-r]               'revbufs)
-
 (global-set-key [?\s-y]               'browse-kill-ring)
 
 (global-set-key (kbd "s-<left>")      'windsize-left)

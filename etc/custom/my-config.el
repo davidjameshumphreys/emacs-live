@@ -44,6 +44,14 @@
   (interactive)
   (shell-command (concat "open -a Marked.app " (buffer-file-name)))
 )
+(defun timestamp ()
+  (interactive)
+  (goto-char (point-max))
+
+  (insert "\n## ")
+  (insert-date)
+  (insert " ##\n")
+  )
 
 (global-unset-key (kbd "\M-3"))
 (fset 'insertPound "#")

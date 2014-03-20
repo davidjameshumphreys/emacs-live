@@ -43,7 +43,8 @@
 (defun markdown-open ()
   (interactive)
   (shell-command (concat "open -a Marked.app " (buffer-file-name)))
-)
+  )
+
 (defun timestamp ()
   (interactive)
   (goto-char (point-max))
@@ -52,6 +53,10 @@
   (insert-date)
   (insert " ##\n")
   )
+
+(defun start-highlight-parentheses-mode ()
+  (highlight-parentheses-mode 1))
+(add-hook 'clojure-mode-hook 'start-highlight-parentheses-mode)
 
 (global-unset-key (kbd "\M-3"))
 (fset 'insertPound "#")

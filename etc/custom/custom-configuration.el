@@ -3,6 +3,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-modes
+   (quote
+    (cider-mode textile-mode smarty-mode nxml-mode html-mode espresso-mode csv-mode yaml-mode sass-mode haml-mode text-mode org-mode log-edit-mode magit-log-edit-mode emacs-lisp-mode lisp-mode lisp-interaction-mode slime-repl-mode c-mode cc-mode c++-mode go-mode java-mode malabar-mode clojure-mode clojurescript-mode scala-mode scheme-mode ocaml-mode tuareg-mode coq-mode haskell-mode agda-mode agda2-mode perl-mode cperl-mode python-mode ruby-mode lua-mode ecmascript-mode javascript-mode js-mode js2-mode php-mode css-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode ts-mode sclang-mode verilog-mode clojure-mode)))
  '(blink-cursor-mode nil)
  '(calendar-latitude 51.5)
  '(calendar-location-name "London")
@@ -17,9 +20,21 @@
  '(display-time-default-load-average nil)
  '(display-time-hook nil)
  '(display-time-mode t)
- '(display-time-world-list (quote (("America/Los_Angeles" "Seattle") ("America/New_York" "New York") ("Europe/London" "London") ("Europe/Paris" "Paris") ("Asia/Calcutta" "Bangalore") ("Asia/Tokyo" "Tokyo") ("Australia/Perth" "Perth") ("Australia/Sydney" "Sydney"))))
+ '(display-time-world-list
+   (quote
+    (("America/Los_Angeles" "Seattle")
+     ("America/New_York" "New York")
+     ("Europe/London" "London")
+     ("Europe/Paris" "Paris")
+     ("Asia/Calcutta" "Bangalore")
+     ("Asia/Tokyo" "Tokyo")
+     ("Australia/Perth" "Perth")
+     ("Australia/Sydney" "Sydney"))))
  '(display-time-world-time-format "%A,%t %d %B %R %Z")
- '(exec-path (quote ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/Applications/Emacs.app/Contents/MacOS/bin" "/usr/local/bin")))
+ '(exec-path
+   (quote
+    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/Applications/Emacs.app/Contents/MacOS/bin" "/usr/local/bin")))
+ '(explicit-shell-file-name "/bin/zsh")
  '(flyspell-default-dictionary "en")
  '(global-linum-mode t)
  '(haskell-notify-p t)
@@ -27,15 +42,22 @@
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
  '(history-length 3000)
- '(hl-paren-background-colors (quote ("black" "white" "black" "white" "black" "white" "black" "white")))
- '(hl-paren-colors (quote ("blue" "black" "red" "green" "blue" "black" "red" "green")))
+ '(hl-paren-background-colors
+   (quote
+    ("black" "white" "black" "white" "black" "white" "black" "white")))
+ '(hl-paren-colors
+   (quote
+    ("white" "black" "white" "black" "white" "black" "white" "black" "white")))
  '(imenu-auto-rescan t)
  '(ispell-program-name "/usr/local/bin/aspell" t)
  '(line-number-display-limit 80)
  '(markdown-command "/usr/local/bin/markdown")
  '(menu-bar-mode t)
- '(minibuffer-prompt-properties (quote (read-only t point-entered minibuffer-avoid-prompt face minibuffer-prompt)))
+ '(minibuffer-prompt-properties
+   (quote
+    (read-only t point-entered minibuffer-avoid-prompt face minibuffer-prompt)))
  '(nrepl-buffer-name-show-port t)
+ '(nrepl-history-file ".nrepl.history")
  '(org-agenda-file-regexp "\\`[^.].*\\.org\\'")
  '(org-agenda-files (quote ("~/.deft/")))
  '(org-log-done (quote time))
@@ -59,7 +81,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#042028" :foreground "#708183" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 160 :width normal :family "Inconsolata"))))
  '(diff-added ((t (:foreground "Green"))))
  '(diff-removed ((t (:foreground "Red"))))
  '(ediff-even-diff-A ((((class color) (background dark)) (:background "dark green"))))

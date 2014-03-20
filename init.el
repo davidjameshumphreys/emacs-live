@@ -215,6 +215,7 @@
 
 ")))
 )
+(setq live-disable-zone t)
 
 (if (not live-disable-zone)
     (add-hook 'term-setup-hook 'zone))
